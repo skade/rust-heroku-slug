@@ -75,6 +75,9 @@ async function cargo(tar, options = {}) {
     let success = false;
 
     try {
+      args[1] = "rustc";
+      args.push("-- -C overflow-checks=no")
+
       output = await exec(joinCmd(args), {});
       success = true;
     } catch(e) {

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tar cvf src.tar Cargo.toml src/*
+tar cvf src.tar Project/Cargo.toml Project/src/*
 
 cat src.tar | base64 -w0 > src.base64
 
